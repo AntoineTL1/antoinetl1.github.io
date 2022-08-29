@@ -1,0 +1,67 @@
+/* UTILITIES */
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+body {
+ font-family: helvetica;
+}
+a {
+ text-decoration: none;
+}
+li {
+ list-style: none;
+}
+
+/* NAVBAR STYLING STARTS */
+.navbar {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding-top: 0.5rem;
+  padding-right: 1rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1rem;
+}
+.nav-links a {
+ color: #696969;
+}
+/* LOGO */
+.logo {
+ font-size: 25px;
+ color: #696969; 
+}
+/* NAVBAR MENU */
+.menu {
+ display: flex;
+ gap: 1em;
+ font-size: 18px;
+}
+.menu li:hover {
+ background-color: #DCDCDC;
+ border-radius: 5px;
+ transition: 0.3s ease;
+}
+.menu li {
+ padding: 5px 14px;
+}
+
+
+
+.centertext {text-align: center;}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
