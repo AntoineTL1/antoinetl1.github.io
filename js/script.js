@@ -1,21 +1,35 @@
     // scroll down for ES6 features. 
+    myBooks = null
 
+
+    function ChangeHtml(html) {
+        $(".json_test").html(html)
+    }
+
+    fetch("https://jsonplaceholder.typicode.com/todos")
+        .then(response => response.json())
+        //.then(data => ChangeHtml(JSON.stringify(data)))
+        .then(data => tableFromJson(data))
     // using regular methods.
 
-    function tableFromJson() {
+    function tableFromJson(myBooks) {
+        // https://jsonplaceholder.typicode.com/todos
+
+        // console.log("myBooks ", myBooks )
+
 
         // the json data. (you can change the values for output.)
-        var myBooks = [
-            {'Book ID': '1', 'Book Name': 'Challenging Times',
-                'Category': 'Business', 'Price': '125.60'
-            },
-            {'Book ID': '2', 'Book Name': 'Learning JavaScript',
-                'Category': 'Programming', 'Price': '56.00'
-            },
-            {'Book ID': '3', 'Book Name': 'Popular Science',
-                'Category': 'Science', 'Price': '210.40'
-            }
-        ]
+        // var myBooks = [
+        //     {'Book ID': '1', 'Book Name': 'Challenging Times',
+        //     'Category': 'Business', 'Price': '125.60'
+        //     },
+        //     {'Book ID': '2', 'Book Name': 'Learning JavaScript',
+        //     'Category': 'Programming', 'Price': '56.00'
+        //     },
+        //     {'Book ID': '3', 'Book Name': 'Popular Science',
+        //     'Category': 'Science', 'Price': '210.40'
+        //     }
+        // ]
 
         // Extract value from table header. 
         // ('Book ID', 'Book Name', 'Category' and 'Price')
@@ -54,6 +68,6 @@
         // Now, add the newly created table with json data, to a container.
         var divShowData = document.getElementById('showData');
         divShowData.innerHTML = "";
-        divShowData.appendChild(table);
+        divShowData.appendChild(table);     
         
     }
