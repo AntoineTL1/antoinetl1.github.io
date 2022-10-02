@@ -6,8 +6,13 @@
         $(".json_test").html(html)
     }
 
-    fetch("https://jsonplaceholder.typicode.com/todos")
-        .then(response => response.json())
+    function handleResponse(response){
+
+        return response.json()
+    }
+
+    fetch("https://storage.googleapis.com/data_json_public/data2.json")
+        .then(response => handleResponse(response))
         //.then(data => ChangeHtml(JSON.stringify(data)))
         .then(data => tableFromJson(data))
     // using regular methods.
