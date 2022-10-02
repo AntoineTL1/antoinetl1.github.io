@@ -12,7 +12,7 @@
    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
 
  </head>
- <body>
+ <body> 
    <nav class="navbar">
      <!-- LOGO -->
      <div class="logo">The NHL Wizard</div>
@@ -21,7 +21,7 @@
        <!-- NAVIGATION MENUS -->
        <div class="menu">
          <li><a href="/">Home</a></li>
-         <li><a href="/">About</a></li>
+         <li><a href="/">Predictions</a></li>
          <li><a href="/">Contact</a>
          </li>
        </div>
@@ -33,31 +33,31 @@
 	<!-- ===============================================-->
 
 	<h1 class="centertext">The NHL Wizard</h1>
-	<img src="https://images.unsplash.com/photo-1658148901083-890a6bdde5c8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" width="280" height="400" alt="image of a table and chairs." class="center">
-	<p>This is my a great website.</p >
-	<p>My goal is to put content that I like, such as photos or data science project.</p >
+	<img src="https://as1.ftcdn.net/v2/jpg/02/55/17/52/1000_F_255175204_T7uK7UINsVwJyOB3S93GMmAZto7MRH5l.jpg" width="750" height="337" alt="image of a table and chairs." class="center"> 
+	<p>Hockey Predictions.</p >
+	<p>Yes sir Miller.</p >
 
-
-  <div class="json_test">salut</div>
 	<!-- ============================================-->
 	<!-- <section> begin ============================-->
 		<section id="predictions">
 
-			<h1> <span>Predictions</span></h1>
-			<p> next few games. </p>
+			<h1> <span>Schedule</span></h1>
+			<p> Games for the next 3 days. </p>
       <!-- <input type='button' onclick='tableFromJson()' value='Show next nhl games.' />  -->
 			<!-- end of .container--> 
       <div class="row">
-        <div class="col-md-3"></div>
-        <div class="col-md-6">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
           <table class="table">
-            <caption>Optional table caption.</caption>
+            <caption>Source: Nhl API.</caption>
             <thead>
               <tr>
-                <th>userId</th>
-                <th>id</th>
-                <th>title</th>
-                <th>complete</th>
+                <th>Date</th>
+                <th>gameID</th>
+                <th>gameType</th>
+                <th>Home</th>
+                <th>Away</th>
+                <th>Venue</th>
               </tr>
             </thead>
             <tbody class="data">
@@ -66,7 +66,7 @@
           </table>
 
         </div>
-        <div class="col-md-3"></div>
+        <div class="col-md-2"></div>
 
       </div>
       

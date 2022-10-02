@@ -11,7 +11,7 @@
         return response.json()
     }
 
-    fetch("https://storage.googleapis.com/data_json_public/data2.json")
+    fetch("https://storage.googleapis.com/data_json_public/schedule4.json")
         .then(response => handleResponse(response))
         //.then(data => ChangeHtml(JSON.stringify(data)))
         .then(data => tableFromJson(data))
