@@ -36,43 +36,73 @@
         //     }
         // ]
 
-        // Extract value from table header. 
-        // ('Book ID', 'Book Name', 'Category' and 'Price')
-        var col = [];
+        //<tr>
+    //     <th scope="row">1</th>
+    //     <td>Mark</td>
+    //     <td>Otto</td>
+    //     <td>@mdo</td>
+    //   </tr>
+
+        var allRow = ""
+
         for (var i = 0; i < myBooks.length; i++) {
+
+            allRow = allRow + "<tr>"
+
             for (var key in myBooks[i]) {
-                if (col.indexOf(key) === -1) {
-                    col.push(key);
-                }
+                allRow = allRow + "<td>" + myBooks[i][key] + "</td>"
+
             }
+
+            allRow = allRow + "</tr>"
+
         }
 
-        // Create a table.
-        var table = document.createElement("table");
+        console.log("allrow", allRow)
 
-        // Create table header row using the extracted headers above.
-        var tr = table.insertRow(-1);                   // table row.
+        $(".data").html(allRow)
 
-        for (var i = 0; i < col.length; i++) {
-            var th = document.createElement("th");      // table header.
-            th.innerHTML = col[i];
-            tr.appendChild(th);
-        }
+        // // Extract value from table header. 
+        // // ('Book ID', 'Book Name', 'Category' and 'Price')
+        // var col = [];
+        // for (var i = 0; i < myBooks.length; i++) {
+        //     for (var key in myBooks[i]) {
+        //         if (col.indexOf(key) === -1) {
+        //             col.push(key);
+        //         }
+        //     }
+        // }
 
-        // add json data to the table as rows.
-        for (var i = 0; i < myBooks.length; i++) {
+        // // Create a table.
+        // var table = document.createElement("table");
 
-            tr = table.insertRow(-1);
+        // // Create table header row using the extracted headers above.
+        // var tr = table.insertRow(-1);                   // table row.
 
-            for (var j = 0; j < col.length; j++) {
-                var tabCell = tr.insertCell(-1);
-                tabCell.innerHTML = myBooks[i][col[j]];
-            }
-        }
+        // for (var i = 0; i < col.length; i++) {
+        //     var th = document.createElement("th");      // table header.
+        //     th.innerHTML = col[i];
+        //     tr.appendChild(th);
+        // }
 
-        // Now, add the newly created table with json data, to a container.
-        var divShowData = document.getElementById('showData');
-        divShowData.innerHTML = "";
-        divShowData.appendChild(table);     
+        // for (var i = 0; i < col.length; i++) {
+        //     <th>col[i]</th>
+        // }
+
+        // // add json data to the table as rows.
+        // for (var i = 0; i < myBooks.length; i++) {
+
+        //     tr = table.insertRow(-1);
+
+        //     for (var j = 0; j < col.length; j++) {
+        //         var tabCell = tr.insertCell(-1);
+        //         tabCell.innerHTML = myBooks[i][col[j]];
+        //     }
+        // }
+
+        // // Now, add the newly created table with json data, to a container.
+        // var divShowData = document.getElementById('showData');
+        // divShowData.innerHTML = "";
+        // divShowData.appendChild(table);     
         
     }
