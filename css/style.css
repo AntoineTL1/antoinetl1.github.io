@@ -65,3 +65,61 @@ li {
   margin-left: auto;
   margin-right: auto;
 }
+
+
+
+
+.course-title {
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 34px;
+  color: #000;
+  margin: 50px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background: url('assets/img/bg.png');
+}
+
+ul {
+  list-style: none;
+}
+
+.image-gallery{
+ max-width: 320px;
+ margin: 10px auto;
+}
+.image-gallery img{
+ width: 100%;
+ height: auto;
+ display: block;
+ border: 4px solid #ededed;
+ box-shadow: 0 2px 25px rgba(0,0,0,0.2);
+}
+ul.thumbnails{
+ /* margin: 0 auto; */
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ flex-shrink: 0;
+ overflow-x: auto;
+}
+ul.thumbnails li {
+ margin: 0 10px;
+}
+ul.thumbnails li a img{
+border: 4px solid #ededed;
+box-shadow: 0 2px 25px rgba(0,0,0,0.2);
+max-width: 120px;
+} 
